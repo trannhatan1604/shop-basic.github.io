@@ -52,3 +52,9 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
+        with:
+          deployment_token: ${{ secrets.GITHUB_TOKEN }}  # Ensure the deployment token is provided
+
+      - name: Skip deploy if missing secrets
+        if: ${{ secrets.GITHUB_TOKEN == '' }}
+        run: echo "Skipping deployment because the deployment token is missing."
