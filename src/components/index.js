@@ -1,0 +1,8 @@
+export {default as Home} from './Home'
+export {default as NavBar} from './Navbar'
+export {default as About_us} from './About_us'
+export {default as Menu} from './Menu'
+export {default as Cart} from './Cart'
+export {default as HomePage} from './HomePage'
+export {default as Footer} from './Footer'
+export {default as Product} from './Product'
